@@ -15,7 +15,7 @@ function ProductCard({ image, title, description, alt }: ProductCardProps) {
             </div>
             <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold text-foreground mb-2">{title}</h3>
-                <p className="text-muted-foreground">{description}</p>
+                <p className="text-primary">{description}</p>
             </CardContent>
         </Card>
     );
@@ -77,7 +77,7 @@ export function FeaturedProducts() {
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                         What We Buy
                     </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    <p className="text-lg text-primary max-w-2xl mx-auto">
                         From luxury watches to fine jewelry, we offer competitive prices for all your valuables
                     </p>
                 </div>

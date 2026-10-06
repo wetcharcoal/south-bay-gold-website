@@ -104,7 +104,7 @@ export function Hero() {
                             South Bay's Premier
                             <span className="block text-gold mt-2">Gold & Jewelry Buyer</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                        <p className="text-lg md:text-xl text-primary mb-8 max-w-2xl mx-auto">
                             Get the best prices for your gold, silver, platinum, and luxury watches. 
                             Trusted by the community for over 28 years.
                         </p>

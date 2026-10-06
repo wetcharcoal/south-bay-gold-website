@@ -89,7 +89,7 @@ export function Testimonials() {
                                 >
                                     “
                                 </span>
-                                <p className="flex-1 min-w-0 pt-2 sm:pt-3 text-base sm:text-lg md:text-xl text-muted-foreground text-center sm:text-left leading-relaxed">
+                                <p className="flex-1 min-w-0 pt-2 sm:pt-3 text-base sm:text-lg md:text-xl text-primary text-center sm:text-left leading-relaxed">
                                     {current.quote}
                                 </p>
                                 <span
@@ -99,7 +99,7 @@ export function Testimonials() {
                                     ”
                                 </span>
                             </div>
-                            <footer className="mt-6 text-center sm:text-left text-sm text-muted-foreground">
+                            <footer className="mt-6 text-center sm:text-left text-sm text-primary">
                                 — {current.author}
                             </footer>
                         </blockquote>

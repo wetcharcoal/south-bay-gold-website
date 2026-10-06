@@ -202,7 +202,7 @@ export function InfoSections() {
                                             </div>
                                             <h3 className="text-xl font-bold text-foreground">{section.title}</h3>
                                         </div>
-                                        <p className="text-muted-foreground leading-relaxed">
+                                        <p className="text-primary leading-relaxed">
                                             {preview}
                                             {isTruncated ? (
                                                 <span className="text-base leading-relaxed underline text-gold-dark">
