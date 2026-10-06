@@ -1,0 +1,16 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining routes for home and locations pages, wrapped with ThemeProvider and Toaster.",
+  "frontend/src/pages/HomePage.tsx": "Home page layout component that composes Hero, PriceGrids, InfoSections, FeaturedProducts sections.",
+  "frontend/src/components/Header.tsx": "Site header with South Bay Gold logo, navigation menu (Home, Locations), contact information, and mobile-responsive menu using Sheet component.",
+  "frontend/src/components/Hero.tsx": "Hero section with gradient background, main heading, and large \"BUY/SELL NOW\" button that opens the appointment booking modal.",
+  "frontend/src/components/PriceGrids.tsx": "Displays two side-by-side grids showing live market spot prices for four precious metals (gold, silver, platinum, palladium) and gold buy prices by karat, with ICP removed.",
+  "frontend/src/components/FeaturedProducts.tsx": "\"What We Buy\" section displaying four product categories (luxury watches, fine jewelry with lion.png, gold coins, and diamonds) in a responsive grid layout.",
+  "frontend/src/components/Footer.tsx": "Site footer with copyright and business contact information, with all Caffeine.ai references removed.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hooks for fetching live precious metals prices from Metalpriceapi.com with fallback prices, calculating gold buy prices, and booking appointments via the backend actor.",
+  "frontend/src/index.css": "Global styles with OKLCH color system including custom gold color palette for light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom gold color tokens and success color for price trends.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper component that provides consistent Header and Footer across all pages with Outlet for page content.",
+  "frontend/src/pages/LocationsPage.tsx": "Locations page displaying three store locations (Manhattan Beach, Torrance, Redondo Beach) with storefront images, addresses, and phone numbers.",
+  "frontend/src/components/InfoSections.tsx": "Four informational cards highlighting South Bay Gold's expertise in gold dealing, diamond buying, estate jewelry, and luxury watches with icons and images.",
+  "frontend/src/components/AppointmentModal.tsx": "Modal dialog component for booking appointments with store location selection dropdown and description textarea, integrated with backend via useBookAppointment hook."
+}

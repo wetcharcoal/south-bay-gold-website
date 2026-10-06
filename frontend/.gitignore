@@ -1,0 +1,8 @@
+# Local replica / canister IDs (copy from public/env.example.json)
+public/env.json
+
+# Local env (see .env.example)
+.env
+.env.local
+.env.*.local
+node_modules
