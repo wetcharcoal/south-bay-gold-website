@@ -9,6 +9,15 @@ import { BuyWatchesPage } from './pages/BuyWatchesPage';
 import { SellGoldPage } from './pages/SellGoldPage';
 import { BuyDiamondsPage } from './pages/BuyDiamondsPage';
 import { SellDiamondsPage } from './pages/SellDiamondsPage';
+import {
+    AdamantineCollectionPage,
+    CustomJewelryPage,
+    EngagementRingsPage,
+    FashionJewelryPage,
+    FleurDeLisPage,
+    HaloCollectionPage,
+    WeddingBandsPage,
+} from './pages/JewelryCatalogPage';
 import { Layout } from './components/Layout';
 
 const rootRoute = createRootRoute({
@@ -63,6 +72,48 @@ const sellDiamondsRoute = createRoute({
     component: SellDiamondsPage,
 });
 
+const fashionJewelryRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/jewelry/fashion',
+    component: FashionJewelryPage,
+});
+
+const customJewelryRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/jewelry/custom',
+    component: CustomJewelryPage,
+});
+
+const engagementRingsRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/jewelry/engagement-rings',
+    component: EngagementRingsPage,
+});
+
+const weddingBandsRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/jewelry/wedding-bands',
+    component: WeddingBandsPage,
+});
+
+const haloCollectionRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/jewelry/halo',
+    component: HaloCollectionPage,
+});
+
+const adamantineCollectionRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/jewelry/adamantine',
+    component: AdamantineCollectionPage,
+});
+
+const fleurDeLisRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/jewelry/fleur-de-lis',
+    component: FleurDeLisPage,
+});
+
 const routeTree = rootRoute.addChildren([
     indexRoute,
     locationsRoute,
@@ -72,6 +123,13 @@ const routeTree = rootRoute.addChildren([
     sellGoldRoute,
     buyDiamondsRoute,
     sellDiamondsRoute,
+    fashionJewelryRoute,
+    customJewelryRoute,
+    engagementRingsRoute,
+    weddingBandsRoute,
+    haloCollectionRoute,
+    adamantineCollectionRoute,
+    fleurDeLisRoute,
 ]);
 
 const router = createRouter({ routeTree });

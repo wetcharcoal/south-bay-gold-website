@@ -22,6 +22,16 @@ const diamondLinks = [
     { label: 'Sell Diamonds', path: '/sell-diamonds' },
 ] as const;
 
+const jewelryLinks = [
+    { label: 'Fashion/Designer Jewelry', path: '/jewelry/fashion' },
+    { label: 'Custom Jewelry Design', path: '/jewelry/custom' },
+    { label: 'Engagement Rings', path: '/jewelry/engagement-rings' },
+    { label: 'Wedding Bands', path: '/jewelry/wedding-bands' },
+    { label: 'Halo Collections', path: '/jewelry/halo' },
+    { label: 'Adamantine Collection', path: '/jewelry/adamantine' },
+    { label: 'Fleur de Lis Collection', path: '/jewelry/fleur-de-lis' },
+] as const;
+
 const linkClassName = 'text-sm font-medium text-foreground hover:text-gold transition-colors';
 
 function DesktopWatchesMenu() {
@@ -165,6 +175,75 @@ function DesktopDiamondsMenu() {
     );
 }
 
+function DesktopJewelryMenu() {
+    const navigate = useNavigate();
+    const [open, setOpen] = useState(false);
+    const rootRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (!open) return;
+
+        const onKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') setOpen(false);
+        };
+        const onPointerDown = (event: MouseEvent) => {
+            if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
+        };
+
+        document.addEventListener('keydown', onKeyDown);
+        document.addEventListener('mousedown', onPointerDown);
+        return () => {
+            document.removeEventListener('keydown', onKeyDown);
+            document.removeEventListener('mousedown', onPointerDown);
+        };
+    }, [open]);
+
+    return (
+        <div
+            ref={rootRef}
+            className="relative"
+            onMouseEnter={() => setOpen(true)}
+            onMouseLeave={() => setOpen(false)}
+        >
+            <button
+                type="button"
+                className={`${linkClassName} inline-flex items-center gap-1`}
+                aria-haspopup="menu"
+                aria-expanded={open}
+                aria-controls="jewelry-menu"
+                onClick={() => setOpen(true)}
+            >
+                Jewelry
+                <ChevronDown className={`h-4 w-4 transition-transform ${open ? 'rotate-180' : ''}`} aria-hidden />
+            </button>
+            {open ? (
+                <div className="absolute left-0 top-full z-50 pt-2">
+                    <div
+                        id="jewelry-menu"
+                        role="menu"
+                        className="max-h-[70vh] min-w-64 overflow-y-auto rounded-md border border-border bg-card p-2 shadow-md"
+                    >
+                        {jewelryLinks.map((item) => (
+                            <button
+                                key={item.path}
+                                type="button"
+                                role="menuitem"
+                                className={`${linkClassName} block w-full rounded-sm px-3 py-2 text-left`}
+                                onClick={() => {
+                                    setOpen(false);
+                                    navigate({ to: item.path });
+                                }}
+                            >
+                                {item.label}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            ) : null}
+        </div>
+    );
+}
+
 function MobileNavLink({
     label,
     path,
@@ -178,7 +257,14 @@ function MobileNavLink({
         | '/buy-watches'
         | '/sell-gold'
         | '/buy-diamonds'
-        | '/sell-diamonds';
+        | '/sell-diamonds'
+        | '/jewelry/fashion'
+        | '/jewelry/custom'
+        | '/jewelry/engagement-rings'
+        | '/jewelry/wedding-bands'
+        | '/jewelry/halo'
+        | '/jewelry/adamantine'
+        | '/jewelry/fleur-de-lis';
 }) {
     const navigate = useNavigate();
 
@@ -204,6 +290,32 @@ function MobileDiamondsMenu() {
                     <MobileNavLink key={item.path} label={item.label} path={item.path} />
                 ))}
             </div>
+        </div>
+    );
+}
+
+function MobileJewelryMenu() {
+    const [open, setOpen] = useState(false);
+
+    return (
+        <div className="flex flex-col gap-3">
+            <button
+                type="button"
+                className="inline-flex items-center gap-2 text-left text-lg font-medium text-foreground hover:text-gold transition-colors"
+                aria-expanded={open}
+                aria-controls="mobile-jewelry-menu"
+                onClick={() => setOpen((current) => !current)}
+            >
+                Jewelry
+                <ChevronDown className={`h-4 w-4 transition-transform ${open ? 'rotate-180' : ''}`} aria-hidden />
+            </button>
+            {open ? (
+                <div id="mobile-jewelry-menu" className="flex flex-col gap-3 pl-4">
+                    {jewelryLinks.map((item) => (
+                        <MobileNavLink key={item.path} label={item.label} path={item.path} />
+                    ))}
+                </div>
+            ) : null}
         </div>
     );
 }
@@ -264,6 +376,7 @@ export function Header() {
                             ))}
                             <DesktopWatchesMenu />
                             <DesktopDiamondsMenu />
+                            <DesktopJewelryMenu />
                             {locations ? (
                                 <button
                                     onClick={() => navigate({ to: locations.path })}
@@ -290,9 +403,7 @@ export function Header() {
                                 </a>
                             </div>
                         </div>
-                        <Button variant="default" className="hidden sm:flex bg-gold hover:bg-gold-dark text-white">
-                            Get Quote
-                        </Button>
+                        
                         <Button
                             type="button"
                             variant="outline"
@@ -320,6 +431,7 @@ export function Header() {
                                     ))}
                                     <MobileWatchesMenu />
                                     <MobileDiamondsMenu />
+                                    <MobileJewelryMenu />
                                     {locations ? (
                                         <MobileNavLink label={locations.label} path={locations.path} />
                                     ) : null}

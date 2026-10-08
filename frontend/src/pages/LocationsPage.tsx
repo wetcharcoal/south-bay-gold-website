@@ -16,7 +16,7 @@ export function LocationsPage() {
             image: '/assets/StoreFront-SBG-Manhattan.png',
             address: '1141 Manhattan Ave, Manhattan Beach, CA 90266',
             phone: '(310) 546-5656',
-            hours: 'closed for rennovations',
+            hours: 'CLOSED FOR RENOVATIONS',
             mapsUrl: 'https://www.google.com/maps/place/South+Bay+Gold+%2B+Finley\'s+Jewelers+-+Gold+%26+Diamond+Buyer,+North+Sepulveda+Boulevard,+Manhattan+Beach,+CA,+USA/@33.824662,-118.3566278,16z/data=!4m5!3m4!1s0x80c2b3f706c40f43:0x89d4d0dd095272ec!8m2!3d33.8943963!4d-118.3962729?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D',
         },
         {
