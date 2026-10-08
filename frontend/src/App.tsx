@@ -7,6 +7,8 @@ import { AboutPage } from './pages/AboutPage';
 import { WatchesPage } from './pages/WatchesPage';
 import { BuyWatchesPage } from './pages/BuyWatchesPage';
 import { SellGoldPage } from './pages/SellGoldPage';
+import { BuyDiamondsPage } from './pages/BuyDiamondsPage';
+import { SellDiamondsPage } from './pages/SellDiamondsPage';
 import { Layout } from './components/Layout';
 
 const rootRoute = createRootRoute({
@@ -49,6 +51,18 @@ const sellGoldRoute = createRoute({
     component: SellGoldPage,
 });
 
+const buyDiamondsRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/buy-diamonds',
+    component: BuyDiamondsPage,
+});
+
+const sellDiamondsRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/sell-diamonds',
+    component: SellDiamondsPage,
+});
+
 const routeTree = rootRoute.addChildren([
     indexRoute,
     locationsRoute,
@@ -56,6 +70,8 @@ const routeTree = rootRoute.addChildren([
     watchesRoute,
     buyWatchesRoute,
     sellGoldRoute,
+    buyDiamondsRoute,
+    sellDiamondsRoute,
 ]);
 
 const router = createRouter({ routeTree });

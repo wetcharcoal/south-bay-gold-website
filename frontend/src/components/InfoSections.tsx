@@ -134,14 +134,14 @@ const SECTION_SOURCES: SectionSource[] = [
         icon: WandSparkles,
         title: 'Custom Jewelry Design',
         description:
-            'We are here to help you Custom Design your engagement or wedding rings. We design & manufacture from a simple diamond-stud earrings to very complex pieces of jewelry. Using the industry’s highest standards and state of the art machines, computers, and programs we create your setting with precious metals such as gold, silver or platinum and/or the precious metal alloys to make the perfect color white-gold, yellow-gold, or rose-gold.',
+            'We are here to help you Custom Design your jewelry. We design & manufacture from a simple diamond-stud earrings to very complex pieces of jewelry. Using the industry’s highest standards and state of the art machines, computers, and programs we create your setting with precious metals such as gold, silver or platinum and/or the precious metal alloys to make the perfect color white-gold, yellow-gold, or rose-gold.',
         image: '/assets/Custom.png',
     },
     {
         icon: Heart,
         title: 'Wedding Bands and Rings',
         description:
-            "We are the South Bay's premier exchange for vintage and pre-owned luxury watches. We specialize in Rolex, Patek Philippe, Omega, and other prestigious brands. Our expert watchmakers authenticate and service every timepiece, ensuring quality and value. Whether buying or selling, trust SBG Luxury Watches for the finest selection of luxury timepieces.",
+            "We are here to help you Custom Design your engagement or wedding rings. We design & manufacture from a simple band to very complex rings that boast passion and commitment. Using the industry’s highest standards and state of the art machines, computers, and programs we create your setting with precious metals such as gold, silver or platinum and/or the precious metal alloys to make the perfect color white-gold, yellow-gold, or rose-gold. We also offer a wide range of wedding bands and rings in a variety of styles and metals.",
         image: '/assets/WeddRing.png',
     },
     {
@@ -155,7 +155,7 @@ const SECTION_SOURCES: SectionSource[] = [
         icon: Sparkles,
         title: 'Precious Gems and Stones',
         description:
-            "We are the South Bay's premier exchange for vintage and pre-owned luxury watches. We specialize in Rolex, Patek Philippe, Omega, and other prestigious brands. Our expert watchmakers authenticate and service every timepiece, ensuring quality and value. Whether buying or selling, trust SBG Luxury Watches for the finest selection of luxury timepieces.",
+            "We are the South Bay's premier specialist for precious gems and stones. We carry a wide range of diamonds, rubies, sapphires, emeralds, and other precious stones. We also offer a wide range of jewelry settings and bands in a variety of styles and metals. ",
         image: '/assets/Gemstones1.png',
     },
 ];
@@ -227,7 +227,7 @@ export function InfoSections() {
                     {openIndex !== null ? (
                         <>
                             <div className="min-h-0 flex-1 overflow-y-auto">
-                                <div className="flex justify-end items-start gap-2 pr-14 text-right">
+                                <div className="flex justify-center items-start gap-2 pr-14 text-right">
                                     <DialogTitle className="text-3xl font-bold leading-tight text-foreground">
                                         {sections[openIndex].title}
                                     </DialogTitle>

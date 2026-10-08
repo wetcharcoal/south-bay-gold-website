@@ -17,6 +17,11 @@ const watchLinks = [
     { label: 'Buy Watches', path: '/buy-watches' },
 ] as const;
 
+const diamondLinks = [
+    { label: 'Buy Diamonds', path: '/buy-diamonds' },
+    { label: 'Sell Diamonds', path: '/sell-diamonds' },
+] as const;
+
 const linkClassName = 'text-sm font-medium text-foreground hover:text-gold transition-colors';
 
 function DesktopWatchesMenu() {
@@ -88,12 +93,92 @@ function DesktopWatchesMenu() {
     );
 }
 
+function DesktopDiamondsMenu() {
+    const navigate = useNavigate();
+    const [open, setOpen] = useState(false);
+    const rootRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (!open) return;
+
+        const onKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') setOpen(false);
+        };
+        const onPointerDown = (event: MouseEvent) => {
+            if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
+        };
+
+        document.addEventListener('keydown', onKeyDown);
+        document.addEventListener('mousedown', onPointerDown);
+        return () => {
+            document.removeEventListener('keydown', onKeyDown);
+            document.removeEventListener('mousedown', onPointerDown);
+        };
+    }, [open]);
+
+    return (
+        <div
+            ref={rootRef}
+            className="relative"
+            onMouseEnter={() => setOpen(true)}
+            onMouseLeave={() => setOpen(false)}
+        >
+            <button
+                type="button"
+                className={`${linkClassName} inline-flex items-center gap-1`}
+                aria-haspopup="menu"
+                aria-expanded={open}
+                aria-controls="diamonds-menu"
+                onClick={() => {
+                    setOpen(false);
+                    navigate({ to: '/buy-diamonds' });
+                }}
+            >
+                Diamonds
+                <ChevronDown className={`h-4 w-4 transition-transform ${open ? 'rotate-180' : ''}`} aria-hidden />
+            </button>
+            {open ? (
+                <div className="absolute left-0 top-full z-50 pt-2">
+                    <div
+                        id="diamonds-menu"
+                        role="menu"
+                        className="min-w-44 rounded-md border border-border bg-card p-2 shadow-md"
+                    >
+                        {diamondLinks.map((item) => (
+                            <button
+                                key={item.path}
+                                type="button"
+                                role="menuitem"
+                                className={`${linkClassName} block w-full rounded-sm px-3 py-2 text-left`}
+                                onClick={() => {
+                                    setOpen(false);
+                                    navigate({ to: item.path });
+                                }}
+                            >
+                                {item.label}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            ) : null}
+        </div>
+    );
+}
+
 function MobileNavLink({
     label,
     path,
 }: {
     label: string;
-    path: '/' | '/about' | '/locations' | '/watches' | '/buy-watches' | '/sell-gold';
+    path:
+        | '/'
+        | '/about'
+        | '/locations'
+        | '/watches'
+        | '/buy-watches'
+        | '/sell-gold'
+        | '/buy-diamonds'
+        | '/sell-diamonds';
 }) {
     const navigate = useNavigate();
 
@@ -107,6 +192,19 @@ function MobileNavLink({
                 {label}
             </button>
         </SheetClose>
+    );
+}
+
+function MobileDiamondsMenu() {
+    return (
+        <div className="flex flex-col gap-3">
+            <MobileNavLink label="Diamonds" path="/buy-diamonds" />
+            <div className="flex flex-col gap-3 pl-4">
+                {diamondLinks.map((item) => (
+                    <MobileNavLink key={item.path} label={item.label} path={item.path} />
+                ))}
+            </div>
+        </div>
     );
 }
 
@@ -165,6 +263,7 @@ export function Header() {
                                 </button>
                             ))}
                             <DesktopWatchesMenu />
+                            <DesktopDiamondsMenu />
                             {locations ? (
                                 <button
                                     onClick={() => navigate({ to: locations.path })}
@@ -220,6 +319,7 @@ export function Header() {
                                         <MobileNavLink key={item.path} label={item.label} path={item.path} />
                                     ))}
                                     <MobileWatchesMenu />
+                                    <MobileDiamondsMenu />
                                     {locations ? (
                                         <MobileNavLink label={locations.label} path={locations.path} />
                                     ) : null}
