@@ -336,12 +336,12 @@ export const engagementRingsPage: JewelryPage = {
                 {
                     "id": "emerald-and-diamond-halo-ring",
                     "title": "Emerald & Diamond Halo Ring",
-                    "summary": "7.63ct Emerald · 1.55ct TCW of Diamonds · Set in 18k White Gold · Adamantine Collection · $14,175",
+                    "summary": "7.63ct Emerald · 1.55ct TCW of Diamonds · Set in 18k White Gold · Adamantine Collection",
                     "variants": [
                         {
                             "id": "18k-white-gold",
                             "metalLabel": "18k White Gold",
-                            "caption": "Emerald & Diamond Halo Ring | 7.63ct Emerald | 1.55ct TCW of Diamonds | Set in 18k White Gold | Item #2757 | Adamantine Collection | $14,175",
+                            "caption": "Emerald & Diamond Halo Ring | 7.63ct Emerald | 1.55ct TCW of Diamonds | Set in 18k White Gold | Item #2757 | Adamantine Collection",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/engagement%20rings/Emerald-Diamond-Ring-White-Gold-SBG-Los-Angeles-Best-Jewelry-Store-3.png",
@@ -380,12 +380,12 @@ export const engagementRingsPage: JewelryPage = {
                 {
                     "id": "emerald-diamond-halo-engagement-ring",
                     "title": "Emerald Diamond Halo Engagement Ring",
-                    "summary": "1.29ct Emerald · TCW 0.55ct of Diamonds · set in 18k White Gold · Adamantine Collection · $4,095",
+                    "summary": "1.29ct Emerald · TCW 0.55ct of Diamonds · set in 18k White Gold · Adamantine Collection",
                     "variants": [
                         {
                             "id": "18k-white-gold",
                             "metalLabel": "18k White Gold",
-                            "caption": "Emerald Diamond Halo Engagement Ring | 1.29ct Emerald | TCW 0.55ct of Diamonds | set in 18k White Gold | Item #2747 | Adamantine Collection | $4,095",
+                            "caption": "Emerald Diamond Halo Engagement Ring | 1.29ct Emerald | TCW 0.55ct of Diamonds | set in 18k White Gold | Item #2747 | Adamantine Collection",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/engagement%20rings/Emerald-Diamond-Halo-Engagement-Ring-White-Gold-Wallis-Simpson-Jackie-Kennedy-Halle-Berry-2.png",
@@ -424,12 +424,12 @@ export const engagementRingsPage: JewelryPage = {
                 {
                     "id": "emerald-diamond-halo-ring",
                     "title": "Emerald Diamond Halo Ring",
-                    "summary": "2.0ct Oval Cut Emerald · 0.54 TCW of Diamonds · Set in 18k White Gold · Adamantine Collection · $5,700",
+                    "summary": "2.0ct Oval Cut Emerald · 0.54 TCW of Diamonds · Set in 18k White Gold · Adamantine Collection",
                     "variants": [
                         {
                             "id": "18k-white-gold",
                             "metalLabel": "18k White Gold",
-                            "caption": "Emerald Diamond Halo Ring | 2.0ct Oval Cut Emerald | 0.54 TCW of Diamonds | Set in 18k White Gold | Item #2738 | Adamantine Collection | $5,700 |",
+                            "caption": "Emerald Diamond Halo Ring | 2.0ct Oval Cut Emerald | 0.54 TCW of Diamonds | Set in 18k White Gold | Item #2738 | Adamantine Collection",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/engagement%20rings/Emerald-Diamond-Halo-Ring-White-Gold-South-Bay-Gold-3-Compare-With-Ritani.jpg",
@@ -468,12 +468,12 @@ export const engagementRingsPage: JewelryPage = {
                 {
                     "id": "center-stone-2-75ct-emerald",
                     "title": "Center Stone: 2.75ct Emerald",
-                    "summary": "0.44ct Diamond Accent Stones · Average Color: E · Average Clarity: VS1 · Setting 18k White Gold & Yellow Gold · $3,800",
+                    "summary": "0.44ct Diamond Accent Stones · Average Color: E · Average Clarity: VS1 · Setting 18k White Gold & Yellow Gold",
                     "variants": [
                         {
                             "id": "18k-white-gold",
                             "metalLabel": "18k White Gold",
-                            "caption": "Center Stone: 2.75ct Emerald | 0.44ct Diamond Accent Stones | Average Color: E | Average Clarity: VS1 | Setting 18k White Gold & Yellow Gold | $3,800",
+                            "caption": "Center Stone: 2.75ct Emerald | 0.44ct Diamond Accent Stones | Average Color: E | Average Clarity: VS1 | Setting 18k White Gold & Yellow Gold",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/engagement%20rings/Emerald-Diamond-Engagement-Ring-Two-Tone-18k-White-Gold-Torrance-South-Bay-Gold.jpg",
@@ -610,12 +610,12 @@ export const engagementRingsPage: JewelryPage = {
                 {
                     "id": "diamond-and-sapphire-vintage-engagement-ring",
                     "title": "Diamond and Sapphire Vintage Engagement Ring",
-                    "summary": "Diamond and Sapphire Vintage Engagement Ring 10k White Gold · $175.00",
+                    "summary": "Diamond and Sapphire Vintage Engagement Ring 10k White Gold",
                     "variants": [
                         {
                             "id": "10k-white-gold",
                             "metalLabel": "10k White Gold",
-                            "caption": "Diamond and Sapphire Vintage Engagement Ring 10k White Gold | Item #11462 | $175.00",
+                            "caption": "Diamond and Sapphire Vintage Engagement Ring 10k White Gold | Item #11462",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/engagement%20rings/Diamond-Sapphire-Estate-Ring-South-Bay-Gold-Finleys-Jewelers-Jewelry.jpg",
@@ -628,12 +628,12 @@ export const engagementRingsPage: JewelryPage = {
                 {
                     "id": "diamond-vintage-engagement-ring",
                     "title": "Diamond Vintage Engagement Ring",
-                    "summary": "TCW 1.10 ct Diamond · 14kt and 4.98g White Gold · $850.00",
+                    "summary": "TCW 1.10 ct Diamond · 14kt and 4.98g White Gold",
                     "variants": [
                         {
                             "id": "white-gold",
                             "metalLabel": "White Gold",
-                            "caption": "Diamond Vintage Engagement Ring | TCW 1.10 ct Diamond | 14kt and 4.98g White Gold | $850.00",
+                            "caption": "Diamond Vintage Engagement Ring | TCW 1.10 ct Diamond | 14kt and 4.98g White Gold",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/engagement%20rings/Diamond-Estate-Ring-South-Bay-Gold-Finleys-Jewelers-Jewelry.jpg",

@@ -1,8 +1,8 @@
 import { toast } from 'sonner';
 
 export const CONTACT_EMAIL = 'info@southbaygold.com';
-export const TORRANCE_PHONE = '(310) 371-4653';
-export const TORRANCE_PHONE_TEL = '+13103714653';
+export const TORRANCE_PHONE = '+13107915431';
+export const TORRANCE_PHONE_TEL = '+13107915431';
 
 const contactToastClass = '!border-gold-dark !bg-gold-dark !text-white';
 

@@ -707,12 +707,12 @@ export const fashionJewelryPage: JewelryPage = {
                 {
                     "id": "diamond-and-sapphire-vintage-engagement-ring",
                     "title": "Diamond and Sapphire Vintage Engagement Ring",
-                    "summary": "Diamond and Sapphire Vintage Engagement Ring 10k White Gold · $175.00",
+                    "summary": "Diamond and Sapphire Vintage Engagement Ring 10k White Gold",
                     "variants": [
                         {
                             "id": "10k-white-gold",
                             "metalLabel": "10k White Gold",
-                            "caption": "Diamond and Sapphire Vintage Engagement Ring 10k White Gold | Item #11462 | $175.00",
+                            "caption": "Diamond and Sapphire Vintage Engagement Ring 10k White Gold | Item #11462",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/Jewelry/Diamond-Sapphire-Estate-Ring-South-Bay-Gold-Finleys-Jewelers-Jewelry.jpg",
@@ -725,12 +725,12 @@ export const fashionJewelryPage: JewelryPage = {
                 {
                     "id": "diamond-vintage-engagement-ring",
                     "title": "Diamond Vintage Engagement Ring",
-                    "summary": "TCW 1.10 ct Diamond · 14kt and 4.98g White Gold · $850.00",
+                    "summary": "TCW 1.10 ct Diamond · 14kt and 4.98g White Gold",
                     "variants": [
                         {
                             "id": "white-gold",
                             "metalLabel": "White Gold",
-                            "caption": "Diamond Vintage Engagement Ring | TCW 1.10 ct Diamond | 14kt and 4.98g White Gold | $850.00",
+                            "caption": "Diamond Vintage Engagement Ring | TCW 1.10 ct Diamond | 14kt and 4.98g White Gold",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/Jewelry/Diamond-Estate-Ring-South-Bay-Gold-Finleys-Jewelers-Jewelry.jpg",

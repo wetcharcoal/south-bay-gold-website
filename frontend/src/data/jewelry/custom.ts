@@ -64,24 +64,6 @@ export const customJewelryPage: JewelryPage = {
                             ]
                         }
                     ]
-                },
-                {
-                    "id": "diamond-solitaire-engagement-or-wedding-ring",
-                    "title": "Diamond Solitaire Engagement or Wedding Ring",
-                    "summary": "",
-                    "variants": [
-                        {
-                            "id": "metal",
-                            "metalLabel": "",
-                            "caption": "Diamond Solitaire Engagement or Wedding Ring",
-                            "images": [
-                                {
-                                    "src": "/assets/jewelry_images/Custom%20Jewelry%20Design/Diamond-Engagement-Wedding-Ring-South-Bay-Gold1.jpg",
-                                    "alt": "Diamond Engagement Wedding Ring South Bay Gold"
-                                }
-                            ]
-                        }
-                    ]
                 }
             ]
         }

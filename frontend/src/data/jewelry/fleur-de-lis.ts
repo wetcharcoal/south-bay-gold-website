@@ -12,12 +12,12 @@ export const fleurDeLisPage: JewelryPage = {
                 {
                     "id": "fleur-de-lis-bangle",
                     "title": "Fleur De Lis Bangle",
-                    "summary": "2-Tone Bangle · $7,500.00",
+                    "summary": "2-Tone Bangle",
                     "variants": [
                         {
                             "id": "18k-white-gold",
                             "metalLabel": "18k White Gold",
-                            "caption": "Fleur De Lis Bangle | Item #FDL-2684| 18k White Gold | 2-Tone Bangle | $7,500.00",
+                            "caption": "Fleur De Lis Bangle | Item #FDL-2684| 18k White Gold | 2-Tone Bangle",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/fleur%20de%20lise%20collection/Fleur-de-Lis-White-Gold-2-Tone-Bangle-34-South-Bay-Gold-Finleys-Jewelers-Jewelry.jpg",
@@ -32,7 +32,7 @@ export const fleurDeLisPage: JewelryPage = {
                         {
                             "id": "18k-yellow-gold",
                             "metalLabel": "18k Yellow Gold",
-                            "caption": "Fleur De Lis Bangle|Item #2629 |18k Yellow Gold | 2-Tone Bangle | $7,500.00",
+                            "caption": "Fleur De Lis Bangle|Item #2629 |18k Yellow Gold | 2-Tone Bangle",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/fleur%20de%20lise%20collection/Fleur-De-Lis-Yellow-Gold-2-Tone-Bangle-Top-Tilt-South-Bay-Gold-Torrance.jpg",
@@ -49,12 +49,12 @@ export const fleurDeLisPage: JewelryPage = {
                 {
                     "id": "fleur-de-lis-cigar-band-for-ladies",
                     "title": "Fleur De Lis Cigar Band for Ladies",
-                    "summary": "$2,500",
+                    "summary": "",
                     "variants": [
                         {
                             "id": "2-tone-18k-white-and-rose-gold",
                             "metalLabel": "2 Tone 18k White and Rose Gold",
-                            "caption": "Fleur De Lis Cigar Band for Ladies | 2 Tone 18k White and Rose Gold |Item #FDS-2695 | $2,500",
+                            "caption": "Fleur De Lis Cigar Band for Ladies | 2 Tone 18k White and Rose Gold |Item #FDS-2695",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/fleur%20de%20lise%20collection/Fleur-de-Lis-White-Rose-Gold-2-Tone-Cigar-Band-Ladies-34-South-Bay-Gold-Christmas-Sale.jpg",
@@ -69,7 +69,7 @@ export const fleurDeLisPage: JewelryPage = {
                         {
                             "id": "2-tone-18k-rose-and-white-gold",
                             "metalLabel": "2 Tone 18k Rose and White Gold",
-                            "caption": "Fleur De Lis Cigar Band for Ladies | 2 Tone 18k Rose and White Gold |Item #FDS-2697 | $2,500",
+                            "caption": "Fleur De Lis Cigar Band for Ladies | 2 Tone 18k Rose and White Gold |Item #FDS-2697",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/fleur%20de%20lise%20collection/Fleur-de-Lis-Rose-White-Gold-2-Tone-Cigar-Band-Ladies-34-South-Bay-Gold-Christmas-Sale.jpg",
@@ -86,12 +86,12 @@ export const fleurDeLisPage: JewelryPage = {
                 {
                     "id": "fleur-de-lis-stackable-band",
                     "title": "Fleur De Lis Stackable Band",
-                    "summary": "$750.00",
+                    "summary": "",
                     "variants": [
                         {
                             "id": "18k-yellow-gold",
                             "metalLabel": "18k Yellow Gold",
-                            "caption": "Fleur De Lis Yellow Gold Stackable Band | 18k Yellow Gold | Item #2704 | $750.00",
+                            "caption": "Fleur De Lis Yellow Gold Stackable Band | 18k Yellow Gold | Item #2704",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/fleur%20de%20lise%20collection/Fleur-de-Lis-Yellow-Gold-Beaded-Stackable-Band-34-South-Bay-Gold-1a.jpg",
@@ -106,7 +106,7 @@ export const fleurDeLisPage: JewelryPage = {
                         {
                             "id": "18k-white-gold",
                             "metalLabel": "18k White Gold",
-                            "caption": "Fleur De Lis White Gold Stackable Band | 18k White Gold | Item #2702 | $750.00",
+                            "caption": "Fleur De Lis White Gold Stackable Band | 18k White Gold | Item #2702",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/fleur%20de%20lise%20collection/Fleur-de-Lis-White-Gold-Beaded-Stackable-Band-34-South-Bay-Gold-1a.jpg",
@@ -121,7 +121,7 @@ export const fleurDeLisPage: JewelryPage = {
                         {
                             "id": "18k-rose-gold",
                             "metalLabel": "18k Rose Gold",
-                            "caption": "Fleur De Lis Rose Gold Stackable Band | 18k Rose Gold | Item #2700 | $750.00",
+                            "caption": "Fleur De Lis Rose Gold Stackable Band | 18k Rose Gold | Item #2700",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/fleur%20de%20lise%20collection/Fleur-de-Lis-Rose-Gold-Beaded-Stackable-Band-34-South-Bay-Gold-1a.jpg",

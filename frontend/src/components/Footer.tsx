@@ -1,4 +1,5 @@
 import { useNavigate } from '@tanstack/react-router';
+import { TORRANCE_PHONE } from '@/lib/contact';
 import { Facebook, Instagram } from 'lucide-react';
 
 const socialFacebookUrl = 'https://www.facebook.com/southbaygold';
@@ -84,7 +85,7 @@ export function Footer() {
                         <span>•</span>
                         <span>Torrance, CA</span>
                         <span>•</span>
-                        <span>(310) 371-4653</span>
+                        <span>{TORRANCE_PHONE}</span>
                     </div>
                 </div>
             </div>

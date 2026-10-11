@@ -24,25 +24,31 @@ export function JewelryCatalogPage({ page }: { page: JewelryPage }) {
     return (
         <main className="bg-background pb-16">
             <div className="container mx-auto px-4 py-12">
-                <h1 className="text-center text-4xl font-bold text-foreground md:text-5xl">{page.title}</h1>
-                {page.subtitle ? (
-                    <p className="mx-auto mt-4 max-w-3xl text-center text-lg text-primary">{page.subtitle}</p>
-                ) : null}
                 {page.hero ? (
-                    <figure className="mx-auto mt-8 max-w-5xl">
-                        <img src={page.hero.src} alt={page.hero.alt} className="max-h-[420px] w-full object-contain" />
-                        {page.heroCaption ? (
-                            <figcaption className="mt-3 text-center text-primary">{page.heroCaption}</figcaption>
+                    <>
+                        <h1 className="sr-only">{page.title}</h1>
+                        <figure className="mx-auto max-w-5xl">
+                            <img src={page.hero.src} alt={page.hero.alt} className="max-h-[420px] w-full object-contain" />
+                            {page.heroCaption ? (
+                                <figcaption className="mt-3 text-center text-primary">{page.heroCaption}</figcaption>
+                            ) : null}
+                        </figure>
+                    </>
+                ) : (
+                    <>
+                        <h1 className="text-center text-4xl font-bold text-foreground md:text-5xl">{page.title}</h1>
+                        {page.subtitle ? (
+                            <p className="mx-auto mt-4 max-w-3xl text-center text-lg text-primary">{page.subtitle}</p>
                         ) : null}
-                    </figure>
-                ) : null}
+                    </>
+                )}
                 {page.intro?.map((paragraph) => (
                     <p key={paragraph} className="mx-auto mt-6 max-w-3xl leading-relaxed text-primary">
                         {paragraph}
                     </p>
                 ))}
                 {page.stepsBeforeGallery ? <StepList steps={page.stepsBeforeGallery} /> : null}
-                <JewelryGallery sections={page.sections} />
+                <JewelryGallery sections={page.sections} centered={page.slug === 'custom'} />
                 {page.stepsAfterGallery ? (
                     <StepList steps={page.stepsAfterGallery} start={(page.stepsBeforeGallery?.length ?? 0) + 1} />
                 ) : null}

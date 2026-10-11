@@ -1,15 +1,16 @@
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useDarkMode } from '@/hooks/useDarkMode';
+import { TORRANCE_PHONE } from '@/lib/contact';
 import { useNavigate } from '@tanstack/react-router';
 import { ChevronDown, Mail, Menu, Moon, Phone, Sun } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const navItems = [
     { label: 'Home', path: '/' },
-    { label: 'About', path: '/about' },
-    { label: 'Sell Gold/Silver', path: '/sell-gold' },
     { label: 'Locations', path: '/locations' },
+    { label: 'Sell Gold/Silver', path: '/sell-gold' },
+    { label: 'About', path: '/about' },
 ] as const;
 
 const watchLinks = [
@@ -349,8 +350,8 @@ function MobileWatchesMenu() {
 export function Header() {
     const navigate = useNavigate();
     const { isDark, toggle } = useDarkMode();
-    const beforeWatches = navItems.filter((item) => item.path !== '/locations');
-    const locations = navItems.find((item) => item.path === '/locations');
+    const beforeMenus = navItems.filter((item) => item.path !== '/about');
+    const about = navItems.find((item) => item.path === '/about');
 
     return (
         <header className="border-b border-border bg-card shadow-sm">
@@ -365,7 +366,7 @@ export function Header() {
                             />
                         </button>
                         <nav className="hidden lg:flex items-center gap-6">
-                            {beforeWatches.map((item) => (
+                            {beforeMenus.map((item) => (
                                 <button
                                     key={item.path}
                                     onClick={() => navigate({ to: item.path })}
@@ -377,12 +378,12 @@ export function Header() {
                             <DesktopWatchesMenu />
                             <DesktopDiamondsMenu />
                             <DesktopJewelryMenu />
-                            {locations ? (
+                            {about ? (
                                 <button
-                                    onClick={() => navigate({ to: locations.path })}
+                                    onClick={() => navigate({ to: about.path })}
                                     className={linkClassName}
                                 >
-                                    {locations.label}
+                                    {about.label}
                                 </button>
                             ) : null}
                         </nav>
@@ -391,7 +392,7 @@ export function Header() {
                         <div className="hidden md:flex flex-col gap-1">
                             <div className="flex items-center gap-2 text-sm text-muted-foreground">
                                 <Phone className="h-4 w-4 shrink-0 text-gold" />
-                                <span className="font-medium text-foreground">(310) 371-4653</span>
+                                <span className="font-medium text-foreground">{TORRANCE_PHONE}</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm text-muted-foreground">
                                 <Mail className="h-4 w-4 shrink-0 text-gold" />
@@ -426,14 +427,14 @@ export function Header() {
                             </SheetTrigger>
                             <SheetContent>
                                 <nav className="flex flex-col gap-4 mt-8">
-                                    {beforeWatches.map((item) => (
+                                    {beforeMenus.map((item) => (
                                         <MobileNavLink key={item.path} label={item.label} path={item.path} />
                                     ))}
                                     <MobileWatchesMenu />
                                     <MobileDiamondsMenu />
                                     <MobileJewelryMenu />
-                                    {locations ? (
-                                        <MobileNavLink label={locations.label} path={locations.path} />
+                                    {about ? (
+                                        <MobileNavLink label={about.label} path={about.path} />
                                     ) : null}
                                 </nav>
                             </SheetContent>

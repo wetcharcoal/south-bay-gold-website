@@ -12,12 +12,12 @@ export const adamantineCollectionPage: JewelryPage = {
                 {
                     "id": "emerald-diamond-halo-ring",
                     "title": "Emerald Diamond Halo Ring",
-                    "summary": "2.0ct Oval Cut Emerald · 0.54 TCW of Diamonds · Set in 18k White Gold · Adamantine Collection · $5,700",
+                    "summary": "2.0ct Oval Cut Emerald · 0.54 TCW of Diamonds · Set in 18k White Gold · Adamantine Collection",
                     "variants": [
                         {
                             "id": "18k-white-gold",
                             "metalLabel": "18k White Gold",
-                            "caption": "Emerald Diamond Halo Ring | 2.0ct Oval Cut Emerald | 0.54 TCW of Diamonds | Set in 18k White Gold | Item #2738 | Adamantine Collection | $5,700 |",
+                            "caption": "Emerald Diamond Halo Ring | 2.0ct Oval Cut Emerald | 0.54 TCW of Diamonds | Set in 18k White Gold | Item #2738 | Adamantine Collection",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/adamantine%20collection/Emerald-Diamond-Halo-Ring-White-Gold-South-Bay-Gold-3-Compare-With-Ritani.jpg",
@@ -56,12 +56,12 @@ export const adamantineCollectionPage: JewelryPage = {
                 {
                     "id": "aquamarine-and-diamond-ring",
                     "title": "Aquamarine and Diamond Ring",
-                    "summary": "Center Stone: 4.33ct Aquamarine · 1.47ct Diamond Accent Stones · Average Color: G · Average Clarity: VS1 · Setting 18k White-Gold · Adamantine Collection · $4,500",
+                    "summary": "Center Stone: 4.33ct Aquamarine · 1.47ct Diamond Accent Stones · Average Color: G · Average Clarity: VS1 · Setting 18k White-Gold · Adamantine Collection",
                     "variants": [
                         {
                             "id": "18k-white-gold",
                             "metalLabel": "18k White Gold",
-                            "caption": "Aquamarine and Diamond Ring | Item #AD-2618 | Center Stone: 4.33ct Aquamarine | 1.47ct Diamond Accent Stones | Average Color: G | Average Clarity: VS1 | Setting 18k White-Gold | Adamantine Collection | $4,500",
+                            "caption": "Aquamarine and Diamond Ring | Item #AD-2618 | Center Stone: 4.33ct Aquamarine | 1.47ct Diamond Accent Stones | Average Color: G | Average Clarity: VS1 | Setting 18k White-Gold | Adamantine Collection",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/adamantine%20collection/Aquamarine-Diamond-South-Bay-Gold-Top.jpg",
@@ -100,12 +100,12 @@ export const adamantineCollectionPage: JewelryPage = {
                 {
                     "id": "yellow-sapphire-and-diamond-ring",
                     "title": "Yellow Sapphire and Diamond Ring",
-                    "summary": "Center stone 13.68ct Yellow Sapphire · 2.10 TCW Tsavorites & Diamonds · Double Halo · Two Tone 18k Gold · Adamantine Collection · $25,000.00",
+                    "summary": "Center stone 13.68ct Yellow Sapphire · 2.10 TCW Tsavorites & Diamonds · Double Halo · Two Tone 18k Gold · Adamantine Collection",
                     "variants": [
                         {
                             "id": "18k-gold",
                             "metalLabel": "18k Gold",
-                            "caption": "Yellow Sapphire and Diamond Ring | Item #AD-2638 | Center stone 13.68ct Yellow Sapphire | 2.10 TCW Tsavorites & Diamonds | Double Halo | Two Tone 18k Gold | Adamantine Collection | $25,000.00",
+                            "caption": "Yellow Sapphire and Diamond Ring | Item #AD-2638 | Center stone 13.68ct Yellow Sapphire | 2.10 TCW Tsavorites & Diamonds | Double Halo | Two Tone 18k Gold | Adamantine Collection",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/adamantine%20collection/Yellow-Sapphire-Tsavorites-Diamonds-Double-Halo-Two-Tone-Gold-South-Bay-Gold-Torrance-34.jpg",
@@ -126,12 +126,12 @@ export const adamantineCollectionPage: JewelryPage = {
                 {
                     "id": "ruby-and-diamonds",
                     "title": "Ruby and Diamonds",
-                    "summary": "Set in Yellow Gold · Adamantine Collection · Adamantine Collection · $3,275",
+                    "summary": "Set in Yellow Gold · Adamantine Collection · Adamantine Collection",
                     "variants": [
                         {
                             "id": "yellow-gold",
                             "metalLabel": "Yellow Gold",
-                            "caption": "Ruby and Diamonds | Set in Yellow Gold | Adamantine Collection | Item #2721 | Adamantine Collection | $3,275",
+                            "caption": "Ruby and Diamonds | Set in Yellow Gold | Adamantine Collection | Item #2721 | Adamantine Collection",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/adamantine%20collection/Ruby-Yellow-Gold-Ring-Top-South-Bay-Gold-310-791-5431.jpg",
@@ -148,12 +148,12 @@ export const adamantineCollectionPage: JewelryPage = {
                 {
                     "id": "ruby-and-diamonds-2",
                     "title": "Ruby and Diamonds",
-                    "summary": "Set in Yellow Gold · Adamantine Collection · Adamantine Collection · $3,275",
+                    "summary": "Set in Yellow Gold · Adamantine Collection · Adamantine Collection",
                     "variants": [
                         {
                             "id": "yellow-gold",
                             "metalLabel": "Yellow Gold",
-                            "caption": "Ruby and Diamonds | Set in Yellow Gold | Adamantine Collection | Item #2721 | Adamantine Collection | $3,275",
+                            "caption": "Ruby and Diamonds | Set in Yellow Gold | Adamantine Collection | Item #2721 | Adamantine Collection",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/adamantine%20collection/Ruby-Diamonds-Yellow-Gold-Ring-Adamantine-South-Bay-Gold-310-791-5431.jpg",
@@ -184,12 +184,12 @@ export const adamantineCollectionPage: JewelryPage = {
                 {
                     "id": "champagne-diamond-ring",
                     "title": "Champagne Diamond Ring",
-                    "summary": "4.93ct Center Stone Pear Cut Diamond · 2 Trillion Cut accent 1.20 TCW of diamonds · Set in 9.4g Platinum · Adamantine Collection · $63,000",
+                    "summary": "4.93ct Center Stone Pear Cut Diamond · 2 Trillion Cut accent 1.20 TCW of diamonds · Set in 9.4g Platinum · Adamantine Collection",
                     "variants": [
                         {
                             "id": "platinum",
                             "metalLabel": "Platinum",
-                            "caption": "Champagne Diamond Ring | 4.93ct Center Stone Pear Cut Diamond | 2 Trillion Cut accent 1.20 TCW of diamonds | Set in 9.4g Platinum | Item #2725 | Adamantine Collection | $63,000",
+                            "caption": "Champagne Diamond Ring | 4.93ct Center Stone Pear Cut Diamond | 2 Trillion Cut accent 1.20 TCW of diamonds | Set in 9.4g Platinum | Item #2725 | Adamantine Collection",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/adamantine%20collection/Pear-Champagne-Diamond-Ring-Two-Tone-Gold-Adamantine-South-Bay-Gold.jpg",
@@ -210,12 +210,12 @@ export const adamantineCollectionPage: JewelryPage = {
                 {
                     "id": "pink-sapphire-diamond-ring",
                     "title": "Pink Sapphire Diamond Ring",
-                    "summary": "Diamond Accent Stone · Set in 18k White Gold · Adamantine Collection · $xxxx · Please Call For Price and Details",
+                    "summary": "Diamond Accent Stone · Set in 18k White Gold · Adamantine Collection · Please Call For Price and Details",
                     "variants": [
                         {
                             "id": "18k-white-gold",
                             "metalLabel": "18k White Gold",
-                            "caption": "Pink Sapphire Diamond Ring | Diamond Accent Stone | Set in 18k White Gold | Item #2741 | Adamantine Collection | $xxxx| Please Call For Price and Details",
+                            "caption": "Pink Sapphire Diamond Ring | Diamond Accent Stone | Set in 18k White Gold | Item #2741 | Adamantine Collection | Please Call For Price and Details",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/adamantine%20collection/Pink-Sapphire-Diamond-White-Gold-34-Torrance-Jewelry-Store.png",
@@ -282,12 +282,12 @@ export const adamantineCollectionPage: JewelryPage = {
                 {
                     "id": "pink-sapphire-diamonds-gold-ring",
                     "title": "Pink Sapphire Diamonds Gold Ring",
-                    "summary": "3.03ct Pink Sapphire · TCW of Diamonds 1.28ct · Color: G · Clarity: VS 1-2 · 2 Tone 18k Gold · Adamantine Collection · $15,750",
+                    "summary": "3.03ct Pink Sapphire · TCW of Diamonds 1.28ct · Color: G · Clarity: VS 1-2 · 2 Tone 18k Gold · Adamantine Collection",
                     "variants": [
                         {
                             "id": "18k-gold",
                             "metalLabel": "18k Gold",
-                            "caption": "Pink Sapphire Diamonds Gold Ring | 3.03ct Pink Sapphire | TCW of Diamonds 1.28ct | Color: G | Clarity: VS 1-2 | 2 Tone 18k Gold | Item #2764 | Adamantine Collection | $15,750",
+                            "caption": "Pink Sapphire Diamonds Gold Ring | 3.03ct Pink Sapphire | TCW of Diamonds 1.28ct | Color: G | Clarity: VS 1-2 | 2 Tone 18k Gold | Item #2764 | Adamantine Collection",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/adamantine%20collection/Pink-Sapphire-Two-Tone-Gold-Ring-Side-SBG-SouthBay-Gold-Compare-with-Kay-Jewelers.jpg",
@@ -308,12 +308,12 @@ export const adamantineCollectionPage: JewelryPage = {
                 {
                     "id": "emerald-diamond-halo-engagement-ring",
                     "title": "Emerald Diamond Halo Engagement Ring",
-                    "summary": "1.29ct Emerald · TCW 0.55ct of Diamonds · set in 18k White Gold · Adamantine Collection · $4,095",
+                    "summary": "1.29ct Emerald · TCW 0.55ct of Diamonds · set in 18k White Gold · Adamantine Collection",
                     "variants": [
                         {
                             "id": "18k-white-gold",
                             "metalLabel": "18k White Gold",
-                            "caption": "Emerald Diamond Halo Engagement Ring | 1.29ct Emerald | TCW 0.55ct of Diamonds | set in 18k White Gold | Item #2747 | Adamantine Collection | $4,095",
+                            "caption": "Emerald Diamond Halo Engagement Ring | 1.29ct Emerald | TCW 0.55ct of Diamonds | set in 18k White Gold | Item #2747 | Adamantine Collection",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/adamantine%20collection/Emerald-Diamond-Halo-Engagement-Ring-White-Gold-Afghan-Persian-Irish-Turkish-1.png",
@@ -352,12 +352,12 @@ export const adamantineCollectionPage: JewelryPage = {
                 {
                     "id": "ruby-and-diamonds-rings",
                     "title": "Ruby & Diamonds Rings",
-                    "summary": "1.65 TCW for Rubies · 0.68 TCW of Diamonds · Set in 14k White Gold · $3,500 · Please call (310)791-5431 for details",
+                    "summary": "1.65 TCW for Rubies · 0.68 TCW of Diamonds · Set in 14k White Gold · Please call (310)791-5431 for details",
                     "variants": [
                         {
                             "id": "14k-white-gold",
                             "metalLabel": "14k White Gold",
-                            "caption": "Ruby & Diamonds Rings | 1.65 TCW for Rubies | 0.68 TCW of Diamonds | Set in 14k White Gold | $3,500 | Please call (310)791-5431 for details",
+                            "caption": "Ruby & Diamonds Rings | 1.65 TCW for Rubies | 0.68 TCW of Diamonds | Set in 14k White Gold | Please call (310)791-5431 for details",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/adamantine%20collection/Ruby-Diamond-Ring-34-south-bay-gold.jpg",
@@ -414,12 +414,12 @@ export const adamantineCollectionPage: JewelryPage = {
                 {
                     "id": "emerald-and-diamond-halo-ring",
                     "title": "Emerald & Diamond Halo Ring",
-                    "summary": "7.63ct Emerald · 1.55ct TCW of Diamonds · Set in 18k White Gold · Adamantine Collection · $14,175",
+                    "summary": "7.63ct Emerald · 1.55ct TCW of Diamonds · Set in 18k White Gold · Adamantine Collection",
                     "variants": [
                         {
                             "id": "18k-white-gold",
                             "metalLabel": "18k White Gold",
-                            "caption": "Emerald & Diamond Halo Ring | 7.63ct Emerald | 1.55ct TCW of Diamonds | Set in 18k White Gold | Item #2757 | Adamantine Collection | $14,175",
+                            "caption": "Emerald & Diamond Halo Ring | 7.63ct Emerald | 1.55ct TCW of Diamonds | Set in 18k White Gold | Item #2757 | Adamantine Collection",
                             "images": [
                                 {
                                     "src": "/assets/jewelry_images/adamantine%20collection/Emerald-Diamond-Ring-White-Gold-SBG-Los-Angeles-Best-Jewelry-Store-2.png",

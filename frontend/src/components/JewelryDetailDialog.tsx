@@ -9,10 +9,21 @@ import type { JewelryPiece } from '@/data/jewelry/types';
 const actionButtonClass =
     'inline-flex min-h-16 flex-col items-center justify-center gap-1 rounded-md border border-gold/30 bg-gold/10 px-4 py-3 text-center text-foreground transition-colors hover:bg-gold/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold';
 
-function JewelryDetailBody({ piece, onClose }: { piece: JewelryPiece; onClose: () => void }) {
+function JewelryDetailBody({
+    piece,
+    initialAngle,
+    onClose,
+}: {
+    piece: JewelryPiece;
+    initialAngle: number;
+    onClose: () => void;
+}) {
     const navigate = useNavigate();
     const [variantIndex, setVariantIndex] = useState(0);
-    const [angleIndex, setAngleIndex] = useState(0);
+    const [angleIndex, setAngleIndex] = useState(() => {
+        const count = piece.variants[0]?.images.length ?? 1;
+        return Math.min(Math.max(initialAngle, 0), Math.max(count - 1, 0));
+    });
     const variant = piece.variants[variantIndex] ?? piece.variants[0];
     const image = variant.images[angleIndex] ?? variant.images[0];
     const showMetalChoices = piece.variants.length > 1;
@@ -109,15 +120,24 @@ function JewelryDetailBody({ piece, onClose }: { piece: JewelryPiece; onClose: (
 
 export function JewelryDetailDialog({
     piece,
+    initialAngle = 0,
     onOpenChange,
 }: {
     piece: JewelryPiece | null;
+    initialAngle?: number;
     onOpenChange: (open: boolean) => void;
 }) {
     return (
         <Dialog open={piece !== null} onOpenChange={onOpenChange}>
             <DialogContent className="max-h-[90vh] w-[calc(100%-2rem)] max-w-5xl overflow-y-auto">
-                {piece ? <JewelryDetailBody key={piece.id} piece={piece} onClose={() => onOpenChange(false)} /> : null}
+                {piece ? (
+                    <JewelryDetailBody
+                        key={`${piece.id}:${initialAngle}`}
+                        piece={piece}
+                        initialAngle={initialAngle}
+                        onClose={() => onOpenChange(false)}
+                    />
+                ) : null}
             </DialogContent>
         </Dialog>
     );

@@ -468,6 +468,28 @@ function stripMetalPhrases(value) {
         .trim();
 }
 
+function stripPrices(value) {
+    if (!value) return value;
+    let text = value.replace(/\$\s*(?:\d[\d,]*(?:\.\d+)?|x+)/gi, '');
+    text = text.replace(/\s*(?:\|\s*){2,}/g, ' | ');
+    text = text.replace(/(?:\s*·\s*){2,}/g, ' · ');
+    text = text.replace(/\s+\|\s*$/g, '').replace(/^\s*\|\s*/g, '');
+    text = text.replace(/\s*·\s*$/g, '').replace(/^\s*·\s*/g, '');
+    text = text.replace(/\s+,/g, ',');
+    text = text.replace(/,\s*(?=\||·|$)/g, '');
+    text = text.replace(/\s{2,}/g, ' ');
+    return text.trim();
+}
+
+function isExcludedCustomPiece(piece) {
+    if (/diamond solitaire engagement or wedding ring/i.test(piece.title)) return true;
+    return piece.variants.some((variant) =>
+        variant.images.some((image) =>
+            /Diamond-Engagement-Wedding-Ring-South-Bay-Gold1/i.test(decodeURIComponent(image.src)),
+        ),
+    );
+}
+
 function buildSummary(title, caption, variantCount) {
     const parts = caption
         .split('|')
@@ -622,13 +644,13 @@ function buildPiece(group, usedIds) {
     return {
         id,
         title,
-        summary: buildSummary(title, variants[0].photos[0].caption, variants.length),
+        summary: stripPrices(buildSummary(title, variants[0].photos[0].caption, variants.length)),
         variants: variants.map((variant) => {
             const numbers = variant.photos.flatMap((photo) => itemNumbers(photo.caption));
             const base = chooseBase(numbers);
             const source = variant.photos.find((photo) => itemNumbers(photo.caption).some((n) => stripPhotoSuffix(n) === base))
                 ?? variant.photos[0];
-            const caption = applyBase(source.caption, base) || title;
+            const caption = stripPrices(applyBase(source.caption, base) || title);
             const variantId = uniqueId(slugify(variant.metalLabel || 'metal'), usedVariantIds);
             return {
                 id: variantId,
@@ -698,7 +720,9 @@ function buildPage(config) {
     const usedPieceIds = new Set();
     const sections = sectionDrafts
         .map((draft) => {
-            const pieces = groupPhotos(draft.photos).map((group) => buildPiece(group, usedPieceIds));
+            const pieces = groupPhotos(draft.photos)
+                .map((group) => buildPiece(group, usedPieceIds))
+                .filter((piece) => config.slug !== 'custom' || !isExcludedCustomPiece(piece));
             const heading = draft.heading;
             return {
                 id: uniqueId(slugify(heading || config.slug), usedSectionIds),
@@ -751,8 +775,8 @@ function assertCatalog(catalog) {
     assert(/white gold/i.test(metalText(bangle)) && /yellow gold/i.test(metalText(bangle)), metalText(bangle));
     assert(!/rose gold/i.test(metalText(bangle)), `Fleur bangle should not include rose: ${metalText(bangle)}`);
         assert(
-        bangle.variants.some((variant) => /\$7,500/.test(variant.caption) && /2684/.test(variant.caption)),
-        `Fleur bangle caption should keep the price and item number: ${bangle.variants.map((variant) => variant.caption).join(' || ')}`,
+        bangle.variants.some((variant) => /2684/.test(variant.caption) && !/\$/.test(variant.caption)),
+        `Fleur bangle caption should keep the item number and drop the price: ${bangle.variants.map((variant) => variant.caption).join(' || ')}`,
     );
     for (const variant of bangle.variants) {
         const srcs = variant.images.map((image) => image.src.toLowerCase()).join(' ');
@@ -767,7 +791,7 @@ function assertCatalog(catalog) {
         metalText(stackable),
     );
     assert(stackable.variants.every((variant) => variant.images.length === 2), 'Stackable band should have two angles');
-    assert(stackable.variants.every((variant) => /\$750/.test(variant.caption)), 'Stackable price missing');
+    assert(stackable.variants.every((variant) => !/\$/.test(variant.caption)), 'Stackable price should be removed');
 
     const bands = catalog.get('wedding-bands');
     const seven = findPiece(bands, (piece) => /7 stone bezel/i.test(piece.title));
@@ -828,6 +852,11 @@ function assertCatalog(catalog) {
     );
     assert(views, 'Custom design ring views were not grouped');
     const solitaires = allPieces(custom).filter((piece) => /solitaire/i.test(piece.title));
+    assert(allPieces(custom).length === 2, `Custom page should have two pieces, found ${allPieces(custom).length}`);
+    assert(
+        !allPieces(custom).some((piece) => /engagement or wedding ring/i.test(piece.title)),
+        'Excluded custom solitaire is still present',
+    );
     assert(solitaires.length >= 1, 'Custom solitaire missing');
     assert(
         solitaires.every((piece) => !piece.variants.some((variant) => variant.images.some((image) => /3d-view/i.test(image.src)))),
@@ -855,7 +884,9 @@ function assertCatalog(catalog) {
 
     for (const page of catalog.values()) {
         for (const piece of allPieces(page)) {
+            assert(!/\$/.test(piece.summary), `Price left in summary: ${piece.title} / ${piece.summary}`);
             for (const variant of piece.variants) {
+                assert(!/\$/.test(variant.caption), `Price left in caption: ${piece.title} / ${variant.caption}`);
                 assert(variant.images.length > 0, `Empty variant ${piece.title}`);
                 for (const image of variant.images) {
                     assert(!image.src.includes('150x150'), image.src);
