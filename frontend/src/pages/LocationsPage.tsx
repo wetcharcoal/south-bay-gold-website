@@ -1,5 +1,9 @@
 import { Card, CardContent } from '@/components/ui/card';
+<<<<<<< HEAD
 import { TORRANCE_PHONE } from '@/lib/contact';
+=======
+import { publicAsset } from '@/lib/publicAsset';
+>>>>>>> square_space
 import { MapPin, Phone, ClockIcon } from 'lucide-react';
 
 export function LocationsPage() {
@@ -46,7 +50,7 @@ export function LocationsPage() {
                         <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow border-gold/20">
                             <div className="aspect-[4/3] bg-muted/30 overflow-hidden">
                                 <img
-                                    src={location.image}
+                                    src={publicAsset(location.image)}
                                     alt={`${location.name} storefront`}
                                     className="w-full h-full object-cover"
                                 />

@@ -9,6 +9,7 @@ import {
     weddingBandsPage,
 } from '@/data/jewelry';
 import type { JewelryPage } from '@/data/jewelry/types';
+import { publicAsset } from '@/lib/publicAsset';
 
 function StepList({ steps, start }: { steps: string[]; start?: number }) {
     return (
@@ -25,6 +26,7 @@ export function JewelryCatalogPage({ page }: { page: JewelryPage }) {
         <main className="bg-background pb-16">
             <div className="container mx-auto px-4 py-12">
                 {page.hero ? (
+<<<<<<< HEAD
                     <>
                         <h1 className="sr-only">{page.title}</h1>
                         <figure className="mx-auto max-w-5xl">
@@ -39,6 +41,12 @@ export function JewelryCatalogPage({ page }: { page: JewelryPage }) {
                         <h1 className="text-center text-4xl font-bold text-foreground md:text-5xl">{page.title}</h1>
                         {page.subtitle ? (
                             <p className="mx-auto mt-4 max-w-3xl text-center text-lg text-primary">{page.subtitle}</p>
+=======
+                    <figure className="mx-auto mt-8 max-w-5xl">
+                        <img src={publicAsset(page.hero.src)} alt={page.hero.alt} className="max-h-[420px] w-full object-contain" />
+                        {page.heroCaption ? (
+                            <figcaption className="mt-3 text-center text-primary">{page.heroCaption}</figcaption>
+>>>>>>> square_space
                         ) : null}
                     </>
                 )}

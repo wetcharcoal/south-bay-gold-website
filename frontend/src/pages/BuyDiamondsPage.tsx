@@ -1,4 +1,5 @@
 import { DiamondsHero } from '@/components/DiamondsHero';
+import { publicAsset } from '@/lib/publicAsset';
 
 const cutShapes = [
     {
@@ -138,7 +139,7 @@ export function BuyDiamondsPage() {
             <DiamondsHero title="Buy Diamonds" />
             <div className="mx-auto w-full max-w-5xl px-4 py-10 md:py-14">
                 <img
-                    src="/assets/buydiamonds/Buy-Diamond-Jewelry-Store-Los-Angeles-1.jpg"
+                    src={publicAsset('/assets/buydiamonds/Buy-Diamond-Jewelry-Store-Los-Angeles-1.jpg')}
                     alt="Buy Diamond Jewelry Store Los Angeles"
                     className="h-auto w-full"
                 />
@@ -179,7 +180,7 @@ export function BuyDiamondsPage() {
                     </p>
                 </div>
                 <img
-                    src="/assets/buydiamonds/how-to-buy-diamonds-4Cs-Cut-Carat-Clarity-color-South-Bay-Gold.png"
+                    src={publicAsset('/assets/buydiamonds/how-to-buy-diamonds-4Cs-Cut-Carat-Clarity-color-South-Bay-Gold.png')}
                     alt="How-To-Buy-Diamonds-4Cs-Cut-Carat-Clarity-color-South-Bay-Gold"
                     className="mx-auto h-auto w-full max-w-2xl"
                 />
@@ -198,7 +199,7 @@ export function BuyDiamondsPage() {
                     {cutShapes.map((shape) => (
                         <li key={shape.src}>
                             <figure className="text-center text-primary">
-                                <img src={shape.src} alt={shape.alt} className="mx-auto h-auto w-full" />
+                                <img src={publicAsset(shape.src)} alt={shape.alt} className="mx-auto h-auto w-full" />
                                 <figcaption className="mt-2 text-sm leading-relaxed">{shape.caption}</figcaption>
                             </figure>
                         </li>

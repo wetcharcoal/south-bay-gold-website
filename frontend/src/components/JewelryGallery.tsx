@@ -3,6 +3,7 @@ import { Card } from '@/components/ui/card';
 import { JewelryDetailDialog } from '@/components/JewelryDetailDialog';
 import { cn } from '@/lib/utils';
 import type { JewelryPiece, JewelrySection } from '@/data/jewelry/types';
+import { publicAsset } from '@/lib/publicAsset';
 
 type OpenPiece = {
     piece: JewelryPiece;
@@ -62,10 +63,22 @@ function JewelryCard({ piece, onOpen }: { piece: JewelryPiece; onOpen: (piece: J
                 onClick={() => onOpen(piece, index)}
                 className="flex flex-1 flex-col p-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
             >
+<<<<<<< HEAD
                 <h3 className="text-base font-bold text-foreground">{piece.title}</h3>
                 {piece.summary ? (
                     <p className="mt-2 line-clamp-4 text-sm leading-relaxed text-primary">{piece.summary}</p>
                 ) : null}
+=======
+                <div className="aspect-square bg-muted/30 p-4">
+                    <img src={publicAsset(image.src)} alt={image.alt || piece.title} className="h-full w-full object-contain" />
+                </div>
+                <div className="flex flex-1 flex-col p-4">
+                    <h3 className="text-base font-bold text-foreground">{piece.title}</h3>
+                    {piece.summary ? (
+                        <p className="mt-2 line-clamp-4 text-sm leading-relaxed text-primary">{piece.summary}</p>
+                    ) : null}
+                </div>
+>>>>>>> square_space
             </button>
         </Card>
     );

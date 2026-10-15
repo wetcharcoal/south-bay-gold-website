@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { watchSections, type WatchListing } from '@/data/watches';
+import { publicAsset } from '@/lib/publicAsset';
 import { cn } from '@/lib/utils';
 
 function WatchCard({ watch }: { watch: WatchListing }) {
@@ -18,11 +19,11 @@ function WatchCard({ watch }: { watch: WatchListing }) {
                     onClick={() => setIndex((current) => (current + 1) % watch.images.length)}
                     aria-label={`Show another photo of ${watch.title}`}
                 >
-                    <img src={image} alt={alt} className="h-full w-full object-contain" />
+                    <img src={publicAsset(image)} alt={alt} className="h-full w-full object-contain" />
                 </button>
             ) : (
                 <div className="aspect-square w-full bg-muted/30 p-4">
-                    <img src={image} alt={alt} className="h-full w-full object-contain" />
+                    <img src={publicAsset(image)} alt={alt} className="h-full w-full object-contain" />
                 </div>
             )}
             {hasMultiplePhotos && (
@@ -39,7 +40,7 @@ function WatchCard({ watch }: { watch: WatchListing }) {
                                 imageIndex === index ? 'border-gold' : 'border-border',
                             )}
                         >
-                            <img src={src} alt="" className="h-full w-full object-contain" />
+                            <img src={publicAsset(src)} alt="" className="h-full w-full object-contain" />
                         </button>
                     ))}
                 </div>

@@ -1,7 +1,7 @@
-# Local replica / canister IDs (copy from public/env.example.json)
-public/env.json
+# Build output is published by GitHub Actions
+dist
 
-# Local env (see .env.example)
+# Local env
 .env
 .env.local
 .env.*.local

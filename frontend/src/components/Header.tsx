@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { publicAsset } from '@/lib/publicAsset';
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useDarkMode } from '@/hooks/useDarkMode';
 import { TORRANCE_PHONE } from '@/lib/contact';
@@ -8,29 +9,35 @@ import { useEffect, useRef, useState } from 'react';
 
 const navItems = [
     { label: 'Home', path: '/' },
+<<<<<<< HEAD
     { label: 'Locations', path: '/locations' },
     { label: 'Sell Gold/Silver', path: '/sell-gold' },
     { label: 'About', path: '/about' },
+=======
+    { label: 'Locations', path: '/locations/' },
+    { label: 'Sell Gold/Silver', path: '/sell-gold/' },
+    { label: 'About', path: '/about/' },
+>>>>>>> square_space
 ] as const;
 
 const watchLinks = [
-    { label: 'Watch Repair', path: '/watches' },
-    { label: 'Buy Watches', path: '/buy-watches' },
+    { label: 'Watch Repair', path: '/watches/' },
+    { label: 'Buy Watches', path: '/buy-watches/' },
 ] as const;
 
 const diamondLinks = [
-    { label: 'Buy Diamonds', path: '/buy-diamonds' },
-    { label: 'Sell Diamonds', path: '/sell-diamonds' },
+    { label: 'Buy Diamonds', path: '/buy-diamonds/' },
+    { label: 'Sell Diamonds', path: '/sell-diamonds/' },
 ] as const;
 
 const jewelryLinks = [
-    { label: 'Fashion/Designer Jewelry', path: '/jewelry/fashion' },
-    { label: 'Custom Jewelry Design', path: '/jewelry/custom' },
-    { label: 'Engagement Rings', path: '/jewelry/engagement-rings' },
-    { label: 'Wedding Bands', path: '/jewelry/wedding-bands' },
-    { label: 'Halo Collections', path: '/jewelry/halo' },
-    { label: 'Adamantine Collection', path: '/jewelry/adamantine' },
-    { label: 'Fleur de Lis Collection', path: '/jewelry/fleur-de-lis' },
+    { label: 'Fashion/Designer Jewelry', path: '/jewelry/fashion/' },
+    { label: 'Custom Jewelry Design', path: '/jewelry/custom/' },
+    { label: 'Engagement Rings', path: '/jewelry/engagement-rings/' },
+    { label: 'Wedding Bands', path: '/jewelry/wedding-bands/' },
+    { label: 'Halo Collections', path: '/jewelry/halo/' },
+    { label: 'Adamantine Collection', path: '/jewelry/adamantine/' },
+    { label: 'Fleur de Lis Collection', path: '/jewelry/fleur-de-lis/' },
 ] as const;
 
 const linkClassName = 'text-sm font-medium text-foreground hover:text-gold transition-colors';
@@ -142,7 +149,7 @@ function DesktopDiamondsMenu() {
                 aria-controls="diamonds-menu"
                 onClick={() => {
                     setOpen(false);
-                    navigate({ to: '/buy-diamonds' });
+                    navigate({ to: '/buy-diamonds/' });
                 }}
             >
                 Diamonds
@@ -252,20 +259,20 @@ function MobileNavLink({
     label: string;
     path:
         | '/'
-        | '/about'
-        | '/locations'
-        | '/watches'
-        | '/buy-watches'
-        | '/sell-gold'
-        | '/buy-diamonds'
-        | '/sell-diamonds'
-        | '/jewelry/fashion'
-        | '/jewelry/custom'
-        | '/jewelry/engagement-rings'
-        | '/jewelry/wedding-bands'
-        | '/jewelry/halo'
-        | '/jewelry/adamantine'
-        | '/jewelry/fleur-de-lis';
+        | '/about/'
+        | '/locations/'
+        | '/watches/'
+        | '/buy-watches/'
+        | '/sell-gold/'
+        | '/buy-diamonds/'
+        | '/sell-diamonds/'
+        | '/jewelry/fashion/'
+        | '/jewelry/custom/'
+        | '/jewelry/engagement-rings/'
+        | '/jewelry/wedding-bands/'
+        | '/jewelry/halo/'
+        | '/jewelry/adamantine/'
+        | '/jewelry/fleur-de-lis/';
 }) {
     const navigate = useNavigate();
 
@@ -285,7 +292,7 @@ function MobileNavLink({
 function MobileDiamondsMenu() {
     return (
         <div className="flex flex-col gap-3">
-            <MobileNavLink label="Diamonds" path="/buy-diamonds" />
+            <MobileNavLink label="Diamonds" path="/buy-diamonds/" />
             <div className="flex flex-col gap-3 pl-4">
                 {diamondLinks.map((item) => (
                     <MobileNavLink key={item.path} label={item.label} path={item.path} />
@@ -350,8 +357,13 @@ function MobileWatchesMenu() {
 export function Header() {
     const navigate = useNavigate();
     const { isDark, toggle } = useDarkMode();
+<<<<<<< HEAD
     const beforeMenus = navItems.filter((item) => item.path !== '/about');
     const about = navItems.find((item) => item.path === '/about');
+=======
+    const beforeWatches = navItems.filter((item) => item.path !== '/about/');
+    const about = navItems.find((item) => item.path === '/about/');
+>>>>>>> square_space
 
     return (
         <header className="border-b border-border bg-card shadow-sm">
@@ -360,7 +372,7 @@ export function Header() {
                     <div className="flex items-center gap-8">
                         <button onClick={() => navigate({ to: '/' })} className="focus:outline-none">
                             <img
-                                src="/assets/South-Bay-Gold-Logo-new.png"
+                                src={publicAsset('/assets/South-Bay-Gold-Logo-new.png')}
                                 alt="South Bay Gold"
                                 className="h-16 w-auto object-contain cursor-pointer"
                             />

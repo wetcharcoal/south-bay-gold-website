@@ -1,4 +1,6 @@
 import { Button } from '@/components/ui/button';
+import { TORRANCE_PHONE, handleCallClick } from '@/lib/contact';
+import { publicAsset } from '@/lib/publicAsset';
 import { getCalApi } from '@calcom/embed-react';
 import { useEffect, useRef, useState } from 'react';
 
@@ -61,6 +63,8 @@ export function Hero() {
         layout: 'month_view',
         useSlotsViewOnSmallScreen: 'true',
     });
+    // Paused while Cal.com membership is upgraded. Restore as data-cal-config on the button.
+    void calConfig;
 
     return (
         <>
@@ -71,7 +75,7 @@ export function Hero() {
                 <div className="pointer-events-none absolute inset-0" aria-hidden="true">
                     {showPoster ? (
                         <img
-                            src="/assets/diamond-1.jpg"
+                            src={publicAsset('/assets/diamond-1.jpg')}
                             alt=""
                             className="h-full w-full object-cover"
                         />
@@ -84,10 +88,10 @@ export function Hero() {
                             loop
                             playsInline
                             preload="metadata"
-                            poster="/assets/diamond-1.jpg"
+                            poster={publicAsset('/assets/diamond-1.jpg')}
                             onError={() => setVideoFailed(true)}
                         >
-                            <source src="/assets/hero.mp4" type="video/mp4" />
+                            <source src={publicAsset('/assets/hero.mp4')} type="video/mp4" />
                         </video>
                     )}
                     <div
@@ -110,13 +114,12 @@ export function Hero() {
                         </p>
                         <Button
                             type="button"
-                            data-cal-namespace="30min"
-                            data-cal-link="ty-qrvtnj/30min"
-                            data-cal-config={calConfig}
                             size="lg" 
-                            className="bg-gold hover:bg-gold-dark text-white font-bold text-xl px-12 py-6 h-auto shadow-xl hover:shadow-2xl transition-all"
+                            className="bg-gold hover:bg-gold-dark text-white font-bold text-xl px-12 py-6 h-auto flex-col gap-1 shadow-xl hover:shadow-2xl transition-all"
+                            onClick={() => void handleCallClick()}
                         >
-                            BOOK APPOINTMENT
+                            <span>CALL US</span>
+                            <span className="text-sm font-medium leading-none">{TORRANCE_PHONE}</span>
                         </Button>
                         
                     </div>

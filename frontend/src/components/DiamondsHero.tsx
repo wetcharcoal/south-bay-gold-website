@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { publicAsset } from '@/lib/publicAsset';
 
 export function DiamondsHero({ title }: { title: string }) {
     const sectionRef = useRef<HTMLElement>(null);
@@ -58,7 +59,7 @@ export function DiamondsHero({ title }: { title: string }) {
                         preload="metadata"
                         onError={() => setVideoFailed(true)}
                     >
-                        <source src="/assets/diamonds.mp4" type="video/mp4" />
+                        <source src={publicAsset('/assets/diamonds.mp4')} type="video/mp4" />
                     </video>
                 )}
                 <div className="absolute inset-0 bg-black/50" />
@@ -69,7 +70,7 @@ export function DiamondsHero({ title }: { title: string }) {
                 </h1>
                 <div className="mt-[0.2em] flex h-[0.75em] items-center gap-[0.2em]">
                     <img
-                        src="/assets/GIA-logo.png"
+                        src={publicAsset('/assets/GIA-logo.png')}
                         alt="GIA"
                         className="h-full w-auto"
                     />

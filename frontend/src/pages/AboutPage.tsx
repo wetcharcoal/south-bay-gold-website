@@ -1,4 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { publicAsset } from '@/lib/publicAsset';
 
 export function AboutPage() {
     return (
@@ -26,7 +27,7 @@ export function AboutPage() {
                 <Card className="max-w-[30rem] mx-auto overflow-hidden border-gold/20 shadow-lg mb-16">
                     <CardContent className="p-0 bg-muted/30">
                         <img
-                            src="/assets/about-products-services.png"
+                            src={publicAsset('/assets/about-products-services.png')}
                             alt="Diagram of South Bay Gold retail and wholesale products and services"
                             className="w-full h-auto block"
                             loading="lazy"

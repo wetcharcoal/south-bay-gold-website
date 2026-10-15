@@ -1,4 +1,5 @@
 import { DiamondsHero } from '@/components/DiamondsHero';
+import { publicAsset } from '@/lib/publicAsset';
 
 export function SellDiamondsPage() {
     return (
@@ -21,7 +22,7 @@ export function SellDiamondsPage() {
                     <h2 className="text-2xl font-bold text-primary md:text-3xl">Loose Diamonds</h2>
                     <p>We specialize in buying loose diamonds. SBG diamond buyers are available to answer any questions you may have during the appraisal & offer process. If you have a GIA and/or EGL USA Certified Diamond, please bring those certificates along as certified diamonds are purchased at a premium over non certified diamonds. Your diamond will be appraised by our gemologists and then an offer will be made to you. The process is very easy and fast. Please contact us  today at our Torrance location at (310)791-5431 or our Manhattan Beach Location at (310) 796-1800.</p>
                     <img
-                        src="/assets/We-Buy-Diamond-Engagement-Wedding-Rings-Los-Angeles.jpg"
+                        src={publicAsset('/assets/We-Buy-Diamond-Engagement-Wedding-Rings-Los-Angeles.jpg')}
                         alt="Diamond engagement and wedding rings"
                         className="h-auto w-full"
                     />
@@ -30,7 +31,7 @@ export function SellDiamondsPage() {
                     If you have a diamond engagement ring or wedding ring, we want them. Again, please do not forget to bring any papers including GIA or EGL certifications. The diamonds will be appraised separately from the gold, silver, or platinum setting. The value of luxury brand names may or may not have effect on the actual value.
                     </p>
                     <img
-                        src="/assets/We-Buy-Diamond-Estate-Jewelry-Los-Angeles.jpg"
+                        src={publicAsset('/assets/We-Buy-Diamond-Estate-Jewelry-Los-Angeles.jpg')}
                         alt="Diamond estate jewelry"
                         className="h-auto w-full"
                     />

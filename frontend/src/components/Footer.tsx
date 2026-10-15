@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { useNavigate } from '@tanstack/react-router';
 import { TORRANCE_PHONE } from '@/lib/contact';
+=======
+>>>>>>> square_space
 import { Facebook, Instagram } from 'lucide-react';
 
 const socialFacebookUrl = 'https://www.facebook.com/southbaygold';
@@ -39,8 +42,6 @@ function SocialIconLink({
 }
 
 export function Footer() {
-    const navigate = useNavigate();
-
     return (
         <footer className="bg-card border-t border-border py-8">
             <div className="container mx-auto px-4">

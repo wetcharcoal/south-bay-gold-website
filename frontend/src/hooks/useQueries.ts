@@ -1,5 +1,4 @@
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { useActor } from './useActor';
+import { useQuery } from '@tanstack/react-query';
 
 interface MarketSpotPrice {
     metal: string;
@@ -120,20 +119,5 @@ export function useMarketPrices() {
         queryFn: fetchMetalPrices,
         refetchInterval: 60000, // Refetch every minute
         staleTime: 30000 // Consider data stale after 30 seconds
-    });
-}
-
-export function useBookAppointment() {
-    const { actor } = useActor();
-    const queryClient = useQueryClient();
-
-    return useMutation({
-        mutationFn: async ({ location, description }: { location: string; description: string }) => {
-            if (!actor) throw new Error('Actor not initialized');
-            await actor.bookAppointment(location, description);
-        },
-        onSuccess: () => {
-            queryClient.invalidateQueries({ queryKey: ['appointments'] });
-        }
     });
 }
