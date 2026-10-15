@@ -1,9 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
-<<<<<<< HEAD
 import { TORRANCE_PHONE } from '@/lib/contact';
-=======
 import { publicAsset } from '@/lib/publicAsset';
->>>>>>> square_space
 import { MapPin, Phone, ClockIcon } from 'lucide-react';
 
 export function LocationsPage() {

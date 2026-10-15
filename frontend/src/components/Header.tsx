@@ -9,15 +9,9 @@ import { useEffect, useRef, useState } from 'react';
 
 const navItems = [
     { label: 'Home', path: '/' },
-<<<<<<< HEAD
-    { label: 'Locations', path: '/locations' },
-    { label: 'Sell Gold/Silver', path: '/sell-gold' },
-    { label: 'About', path: '/about' },
-=======
     { label: 'Locations', path: '/locations/' },
     { label: 'Sell Gold/Silver', path: '/sell-gold/' },
     { label: 'About', path: '/about/' },
->>>>>>> square_space
 ] as const;
 
 const watchLinks = [
@@ -357,13 +351,8 @@ function MobileWatchesMenu() {
 export function Header() {
     const navigate = useNavigate();
     const { isDark, toggle } = useDarkMode();
-<<<<<<< HEAD
-    const beforeMenus = navItems.filter((item) => item.path !== '/about');
-    const about = navItems.find((item) => item.path === '/about');
-=======
-    const beforeWatches = navItems.filter((item) => item.path !== '/about/');
+    const beforeMenus = navItems.filter((item) => item.path !== '/about/');
     const about = navItems.find((item) => item.path === '/about/');
->>>>>>> square_space
 
     return (
         <header className="border-b border-border bg-card shadow-sm">

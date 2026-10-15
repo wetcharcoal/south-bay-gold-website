@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useNavigate } from '@tanstack/react-router';
 import { TORRANCE_PHONE } from '@/lib/contact';
-=======
->>>>>>> square_space
 import { Facebook, Instagram } from 'lucide-react';
 
 const socialFacebookUrl = 'https://www.facebook.com/southbaygold';

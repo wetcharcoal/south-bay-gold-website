@@ -27,7 +27,7 @@ function JewelryCard({ piece, onOpen }: { piece: JewelryPiece; onOpen: (piece: J
                     onClick={() => setIndex((current) => (current + 1) % images.length)}
                     aria-label={`Show another photo of ${piece.title}`}
                 >
-                    <img src={image.src} alt={image.alt || piece.title} className="h-full w-full object-contain" />
+                    <img src={publicAsset(image.src)} alt={image.alt || piece.title} className="h-full w-full object-contain" />
                 </button>
             ) : (
                 <button
@@ -36,7 +36,7 @@ function JewelryCard({ piece, onOpen }: { piece: JewelryPiece; onOpen: (piece: J
                     onClick={() => onOpen(piece, 0)}
                     aria-label={`View ${piece.title}`}
                 >
-                    <img src={image.src} alt={image.alt || piece.title} className="h-full w-full object-contain" />
+                    <img src={publicAsset(image.src)} alt={image.alt || piece.title} className="h-full w-full object-contain" />
                 </button>
             )}
             {hasMultiplePhotos ? (
@@ -53,7 +53,7 @@ function JewelryCard({ piece, onOpen }: { piece: JewelryPiece; onOpen: (piece: J
                                 imageIndex === index ? 'border-gold' : 'border-border',
                             )}
                         >
-                            <img src={angle.src} alt="" className="h-full w-full object-contain" />
+                            <img src={publicAsset(angle.src)} alt="" className="h-full w-full object-contain" />
                         </button>
                     ))}
                 </div>
@@ -63,22 +63,10 @@ function JewelryCard({ piece, onOpen }: { piece: JewelryPiece; onOpen: (piece: J
                 onClick={() => onOpen(piece, index)}
                 className="flex flex-1 flex-col p-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
             >
-<<<<<<< HEAD
                 <h3 className="text-base font-bold text-foreground">{piece.title}</h3>
                 {piece.summary ? (
                     <p className="mt-2 line-clamp-4 text-sm leading-relaxed text-primary">{piece.summary}</p>
                 ) : null}
-=======
-                <div className="aspect-square bg-muted/30 p-4">
-                    <img src={publicAsset(image.src)} alt={image.alt || piece.title} className="h-full w-full object-contain" />
-                </div>
-                <div className="flex flex-1 flex-col p-4">
-                    <h3 className="text-base font-bold text-foreground">{piece.title}</h3>
-                    {piece.summary ? (
-                        <p className="mt-2 line-clamp-4 text-sm leading-relaxed text-primary">{piece.summary}</p>
-                    ) : null}
-                </div>
->>>>>>> square_space
             </button>
         </Card>
     );
