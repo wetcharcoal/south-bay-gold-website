@@ -35,7 +35,7 @@ jobs:
       - name: Build
         working-directory: frontend
         env:
-          VITE_BASE: /south-bay-gold-website/
+          VITE_BASE: /
         run: npm run build
 
       - name: Upload Pages artifact
