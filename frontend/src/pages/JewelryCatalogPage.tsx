@@ -9,6 +9,7 @@ import {
     weddingBandsPage,
 } from '@/data/jewelry';
 import type { JewelryPage } from '@/data/jewelry/types';
+import { publicAsset } from '@/lib/publicAsset';
 
 function StepList({ steps, start }: { steps: string[]; start?: number }) {
     return (
@@ -30,7 +31,7 @@ export function JewelryCatalogPage({ page }: { page: JewelryPage }) {
                 ) : null}
                 {page.hero ? (
                     <figure className="mx-auto mt-8 max-w-5xl">
-                        <img src={page.hero.src} alt={page.hero.alt} className="max-h-[420px] w-full object-contain" />
+                        <img src={publicAsset(page.hero.src)} alt={page.hero.alt} className="max-h-[420px] w-full object-contain" />
                         {page.heroCaption ? (
                             <figcaption className="mt-3 text-center text-primary">{page.heroCaption}</figcaption>
                         ) : null}

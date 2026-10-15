@@ -1,4 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { publicAsset } from '@/lib/publicAsset';
 
 type ProductCardProps = {
     image: string;
@@ -11,7 +12,7 @@ function ProductCard({ image, title, description, alt }: ProductCardProps) {
     return (
         <Card className="overflow-hidden hover:shadow-xl transition-shadow border-gold/20">
             <div className="aspect-square bg-muted/30 flex items-center justify-center p-8">
-                <img src={image} alt={alt} className="w-full h-full object-contain" />
+                <img src={publicAsset(image)} alt={alt} className="w-full h-full object-contain" />
             </div>
             <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold text-foreground mb-2">{title}</h3>

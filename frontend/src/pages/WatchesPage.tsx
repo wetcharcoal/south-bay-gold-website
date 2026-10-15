@@ -1,10 +1,12 @@
+import { publicAsset } from '@/lib/publicAsset';
+
 export function WatchesPage() {
     return (
         <main className="bg-background">
             <div className="mx-auto w-full lg:w-3/5">
                 <section aria-label="Watch Repair">
                     <img
-                        src="/assets/watch-repair.png"
+                        src={publicAsset('/assets/watch-repair.png')}
                         alt="Watch repair for fashion, luxury, and vintage timepieces"
                         className="h-auto w-full"
                     />
@@ -37,7 +39,7 @@ export function WatchesPage() {
 
                 <section aria-label="Watch Battery Replacement">
                     <img
-                        src="/assets/watch-battery.png"
+                        src={publicAsset('/assets/watch-battery.png')}
                         alt="Watch battery replacement starting at $24.99"
                         className="h-auto w-full"
                     />

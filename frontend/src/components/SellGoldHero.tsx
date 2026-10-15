@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { publicAsset } from '@/lib/publicAsset';
 
 export function SellGoldHero() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -58,7 +59,7 @@ export function SellGoldHero() {
                         preload="metadata"
                         onError={() => setVideoFailed(true)}
                     >
-                        <source src="/assets/gold-jewelry.mp4" type="video/mp4" />
+                        <source src={publicAsset('/assets/gold-jewelry.mp4')} type="video/mp4" />
                     </video>
                 )}
                 <div className="absolute inset-0 bg-black/50" />

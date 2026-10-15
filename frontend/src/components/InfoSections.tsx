@@ -6,6 +6,7 @@ import {
     DialogTitle,
 } from '@/components/ui/dialog';
 import { CONTACT_EMAIL, TORRANCE_PHONE, copyToClipboard, handleCallClick, showContactToast } from '@/lib/contact';
+import { publicAsset } from '@/lib/publicAsset';
 import { Coins, Gem, Crown, Watch, Heart, WandSparkles, Sparkles, Mail } from 'lucide-react';
 
 async function handleEmailClick() {
@@ -127,7 +128,7 @@ export function InfoSections() {
                                 >
                                     <div className="md:w-1/3 flex items-center self-stretch justify-center p-6">
                                         <img
-                                            src={section.image}
+                                            src={publicAsset(section.image)}
                                             alt={section.title}
                                             className="w-full object-contain max-h-48"
                                         />

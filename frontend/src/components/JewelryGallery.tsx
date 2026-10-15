@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { JewelryDetailDialog } from '@/components/JewelryDetailDialog';
 import type { JewelryPiece, JewelrySection } from '@/data/jewelry/types';
+import { publicAsset } from '@/lib/publicAsset';
 
 function JewelryCard({ piece, onOpen }: { piece: JewelryPiece; onOpen: (piece: JewelryPiece) => void }) {
     const image = piece.variants[0]?.images[0];
@@ -15,7 +16,7 @@ function JewelryCard({ piece, onOpen }: { piece: JewelryPiece; onOpen: (piece: J
                 className="flex h-full w-full flex-col text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
             >
                 <div className="aspect-square bg-muted/30 p-4">
-                    <img src={image.src} alt={image.alt || piece.title} className="h-full w-full object-contain" />
+                    <img src={publicAsset(image.src)} alt={image.alt || piece.title} className="h-full w-full object-contain" />
                 </div>
                 <div className="flex flex-1 flex-col p-4">
                     <h3 className="text-base font-bold text-foreground">{piece.title}</h3>

@@ -132,7 +132,13 @@ const routeTree = rootRoute.addChildren([
     fleurDeLisRoute,
 ]);
 
-const router = createRouter({ routeTree });
+const basepath = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
+
+const router = createRouter({
+    routeTree,
+    basepath,
+    trailingSlash: 'always',
+});
 
 declare module '@tanstack/react-router' {
     interface Register {

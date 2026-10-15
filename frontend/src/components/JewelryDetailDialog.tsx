@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/compone
 import { TORRANCE_PHONE, handleCallClick } from '@/lib/contact';
 import { cn } from '@/lib/utils';
 import type { JewelryPiece } from '@/data/jewelry/types';
+import { publicAsset } from '@/lib/publicAsset';
 
 const actionButtonClass =
     'inline-flex min-h-16 flex-col items-center justify-center gap-1 rounded-md border border-gold/30 bg-gold/10 px-4 py-3 text-center text-foreground transition-colors hover:bg-gold/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold';
@@ -22,7 +23,7 @@ function JewelryDetailBody({ piece, onClose }: { piece: JewelryPiece; onClose: (
             <div>
                 <div className="flex aspect-square items-center justify-center rounded-md bg-muted/30 p-4">
                     <img
-                        src={image.src}
+                        src={publicAsset(image.src)}
                         alt={image.alt || piece.title}
                         className="max-h-[70vh] w-full object-contain"
                     />
@@ -41,7 +42,7 @@ function JewelryDetailBody({ piece, onClose }: { piece: JewelryPiece; onClose: (
                                     index === angleIndex ? 'border-gold' : 'border-border',
                                 )}
                             >
-                                <img src={angle.src} alt="" className="h-full w-full object-contain" />
+                                <img src={publicAsset(angle.src)} alt="" className="h-full w-full object-contain" />
                             </button>
                         ))}
                     </div>
@@ -95,7 +96,7 @@ function JewelryDetailBody({ piece, onClose }: { piece: JewelryPiece; onClose: (
                             className={actionButtonClass}
                             onClick={() => {
                                 onClose();
-                                navigate({ to: '/locations' });
+                                navigate({ to: '/locations/' });
                             }}
                         >
                             <span className="text-base font-semibold">Visit Us</span>

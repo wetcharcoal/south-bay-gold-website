@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
+import { publicAsset } from '@/lib/publicAsset';
 
-const bannerSrc = '/assets/watches/buy-sell-breitling-banner.jpg';
+const bannerSrc = publicAsset('/assets/watches/buy-sell-breitling-banner.jpg');
 
 export function WatchesHero() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -64,7 +65,7 @@ export function WatchesHero() {
                         poster={bannerSrc}
                         onError={() => setVideoFailed(true)}
                     >
-                        <source src="/assets/watches.mp4" type="video/mp4" />
+                        <source src={publicAsset('/assets/watches.mp4')} type="video/mp4" />
                     </video>
                 )}
                 <div

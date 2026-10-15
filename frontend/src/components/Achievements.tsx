@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { publicAsset } from '@/lib/publicAsset';
 import {
     Dialog,
     DialogContent,
@@ -39,7 +40,7 @@ export function Achievements() {
                                 className="flex min-h-0 min-w-0 flex-1 items-center justify-center"
                             >
                                 <img
-                                    src={src}
+                                    src={publicAsset(src)}
                                     alt={alt}
                                     className="max-h-full max-w-full object-contain object-center"
                                 />
